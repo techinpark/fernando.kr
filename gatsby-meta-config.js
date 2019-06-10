@@ -5,10 +5,10 @@ module.exports = {
   introduction: `I explain with words and code. I explain with words and code. I explain with words and code.`,
   siteUrl: `https://gatsby-starter-bee.netlify.com`, // Your blog site url
   social: {
-    twitter: `https://twitter.com/techinpark`, // Your Twitter account
-    github: `https://github.com/techinpark`, // Your GitHub account
+    twitter: `techinpark`, // Your Twitter account
+    github: `techinpark`, // Your GitHub account
     medium: ``, // Your Medium account
-    facebook: `https://facebook.com/techinpark.`, // Your Facebook account
+    facebook: `techinpark.`, // Your Facebook account
   },
   icon: `content/assets/felog.png`, // Add your favicon
   keywords: [`blog`],
