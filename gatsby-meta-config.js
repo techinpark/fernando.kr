@@ -1,20 +1,20 @@
 module.exports = {
-  title: `Bee starter`,
+  title: `Techin Park`,
   description: `Blog posted about ...`,
-  author: `[Your Name]`,
+  author: `techinpark`,
   introduction: `I explain with words and code. I explain with words and code. I explain with words and code.`,
   siteUrl: `https://gatsby-starter-bee.netlify.com`, // Your blog site url
   social: {
-    twitter: ``, // Your Twitter account
-    github: ``, // Your GitHub account
+    twitter: `https://twitter.com/techinpark`, // Your Twitter account
+    github: `https://github.com/techinpark`, // Your GitHub account
     medium: ``, // Your Medium account
-    facebook: ``, // Your Facebook account
+    facebook: `https://facebook.com/techinpark.`, // Your Facebook account
   },
   icon: `content/assets/felog.png`, // Add your favicon
   keywords: [`blog`],
   comment: {
     disqusShortName: '', // Your disqus-short-name. check disqus.com.
-    utterances: 'JaeYeopHan/gatsby-starter-bee', // Your repository for archive comment
+    utterances: 'techinpark/blog-comments', // Your repository for archive comment
   },
   configs: {
     countOfInitialPost: 10, // Config your initial count of post
