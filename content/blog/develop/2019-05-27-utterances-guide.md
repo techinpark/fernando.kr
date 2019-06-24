@@ -45,7 +45,7 @@ category: develop
         async>
 </script>
 ```
->repository 이름은 제 경우에 techinpark/blog-comments 로 넣었으니 자신의 URL 경로에 알맞게 수정하시면 됩니다.
+>repository 이름은 제 경우에 `techinpark/blog-comments` 로 넣었으니 자신의 URL 경로에 알맞게 수정하시면 됩니다.
 
  
 
@@ -55,8 +55,7 @@ category: develop
 
 ### 시행착오 및 꿀팁 
 저의 경우 SEO를 위해서 블로그 글 주소를 글의 제목으로 나오게 하는 옵션을 이용하였으나,
-그렇게 하게 되면 blog-comments 레포지토리에 issue 제목이 지저분하게 달리는 문제점이 있습니다.
+그렇게 하게 되면 `blog-comments` 레포지토리에 `issue` 제목이 지저분하게 달리는 문제점이 있습니다.
 
 해결 방법은 블로그 글 주소를 숫자로 바꿔주시면 깔끔하게 적용됩니다.
-
 블로그뿐만 아니라 단일 페이지에서 개발자들의 의견을 받고 싶을 때 유용하게 이용할 수 있을 것 같습니다.
