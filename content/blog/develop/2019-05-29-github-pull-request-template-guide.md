@@ -9,9 +9,9 @@ category: develop
 ### Github 템플릿 이란?
 github에서 자체적으로 제공해주는 기본 기능이지만, 따로 설정을 하지 않으면 사용을 할 수가 없습니다.
 
-기본적으로 새로운 이슈를 생성하거나 새로운 Pull Request를 전송할 때 다수의 작업자들과 함께 작업하는 프로젝트의 경우에는 보통 규칙이 있기 마련입니다.
+기본적으로 새로운 이슈를 생성하거나 새로운 `Pull Request`를 전송할 때 다수의 작업자들과 함께 작업하는 프로젝트의 경우에는 보통 규칙이 있기 마련입니다.
 
-위와 같은 프로젝트에서 모두가 각자의 양식으로 Pull Request를 하거나 Issue 등록을 한다면
+위와 같은 프로젝트에서 모두가 각자의 양식으로 `Pull Request`를 하거나 `Issue` 등록을 한다면
 
 내용을 파악하기가 어렵겠죠??
 
@@ -33,5 +33,7 @@ Github에서 사용가능한 템플릿은 총 3가지입니다.
 필요에 따라 사용하시면 될 것 같습니다
 
 그래도 모르겠다 하시는 분들을 위해 github repo 주소를 공유드립니다. 
-https://github.com/techinpark/github-template-tutorial/ 즐거운 코딩 하세요!
+https://github.com/techinpark/github-template-tutorial/ 
+
+즐거운 코딩 하세요!
 
