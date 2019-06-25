@@ -2,7 +2,7 @@ module.exports = {
   title: `Techin Park`,
   description: `가볍게 생각을 정리하기 위해 만들어진 블로그 입니다`,
   author: `techinpark`,
-  introduction: `iOS Developer 🇰🇷 : 새로운 오픈소스에 관심이 많습니다 / Start up addict`,
+  introduction: `iOS Developer 🇰🇷 : 수트 입는 개발자 / 오픈소스를 좋아합니다`,
   siteUrl: `https://gatsby-starter-bee.netlify.com`, // Your blog site url
   social: {
     twitter: `techinpark`, // Your Twitter account
