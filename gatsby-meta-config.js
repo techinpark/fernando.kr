@@ -1,5 +1,5 @@
 module.exports = {
-  title: `Techin Park`,
+  title: `Fernando`,
   description: `가볍게 생각을 정리하기 위해 만들어진 블로그 입니다`,
   author: `techinpark`,
   introduction: `iOS Developer 🇰🇷 : 수트 입는 개발자 / 오픈소스를 좋아합니다`,
