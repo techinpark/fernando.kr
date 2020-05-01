@@ -1,7 +1,7 @@
 module.exports = {
-  title: `Fernando`,
+  title: `Fernando 기술 블로그`,
   description: `가볍게 생각을 정리하기 위해 만들어진 블로그 입니다`,
-  author: `techinpark`,
+  author: `fernando`,
   introduction: `iOS Developer 🇰🇷 : 수트 입는 개발자 / 오픈소스를 좋아합니다`,
   siteUrl: `https://gatsby-starter-bee.netlify.com`, // Your blog site url
   social: {
