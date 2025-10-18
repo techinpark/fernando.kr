@@ -21,7 +21,9 @@ export const Header: React.FC = () => {
     <header className="header" role="banner">
       <div className="header-inner">
         <Link to="/" className="header-title" aria-label="홈으로 이동">
-          {title}
+          FERNANDO
+          <br />
+          기술블로그
         </Link>
         <ThemeSwitch />
       </div>
