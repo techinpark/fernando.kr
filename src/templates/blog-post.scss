@@ -110,6 +110,28 @@
     text-decoration: underline;
   }
 
+  strong {
+    font-weight: 700;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  hr {
+    border: none;
+    height: 1px;
+    margin: 3rem 0;
+
+    body.light & {
+      background-color: var(--color-category-border-light);
+    }
+
+    body.dark & {
+      background-color: var(--color-category-border-dark);
+    }
+  }
+
   ul,
   ol {
     margin: 1.5rem 0;
@@ -117,28 +139,240 @@
 
     li {
       margin: 0.75rem 0;
+      line-height: 1.8;
+
+      &::marker {
+        body.light & {
+          color: var(--color-text-secondary-light);
+        }
+
+        body.dark & {
+          color: var(--color-text-secondary-dark);
+        }
+      }
+    }
+
+    // 중첩 리스트
+    ul,
+    ol {
+      margin: 0.5rem 0;
+    }
+  }
+
+  // 체크박스가 있는 리스트
+  ul {
+    li {
+      input[type='checkbox'] {
+        margin-right: 0.5rem;
+      }
     }
   }
 
   img {
     margin: 2rem 0;
     border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    body.dark & {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
   }
 
+  // 이미지가 있는 figure
+  figure {
+    margin: 2rem 0;
+
+    img {
+      margin: 0;
+    }
+
+    figcaption {
+      margin-top: 0.5rem;
+      font-size: 0.875rem;
+      text-align: center;
+      font-style: italic;
+
+      body.light & {
+        color: var(--color-text-secondary-light);
+      }
+
+      body.dark & {
+        color: var(--color-text-secondary-dark);
+      }
+    }
+  }
+
+  // 인라인 코드
   code {
+    font-family: var(--font-family-code);
     font-size: 0.9em;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-weight: 500;
+
+    body.light & {
+      background-color: rgba(175, 184, 193, 0.2);
+      color: #d73a49;
+    }
+
+    body.dark & {
+      background-color: rgba(110, 118, 129, 0.4);
+      color: #ff7b72;
+    }
   }
 
+  // 코드 블록
   pre {
     margin: 2rem 0;
+    padding: 1.25rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    border: 1px solid;
+    line-height: 1.6;
+
+    body.light & {
+      background-color: #f6f8fa;
+      border-color: #e1e4e8;
+    }
+
+    body.dark & {
+      background-color: #161b22;
+      border-color: #30363d;
+    }
+
+    code {
+      padding: 0;
+      background: none;
+      color: inherit;
+      font-size: 0.875rem;
+      font-weight: 400;
+    }
+
+    // 코드 블록 스크롤바
+    &::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 0 0 8px 8px;
+
+      body.light & {
+        background: #e1e4e8;
+      }
+
+      body.dark & {
+        background: #0d1117;
+      }
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+
+      body.light & {
+        background: #c1c7cd;
+
+        &:hover {
+          background: #959da5;
+        }
+      }
+
+      body.dark & {
+        background: #484f58;
+
+        &:hover {
+          background: #6e7681;
+        }
+      }
+    }
   }
 
+  // 인용구
   blockquote {
     margin: 2rem 0;
+    padding: 1rem 1.5rem;
+    border-left: 4px solid;
+    border-radius: 0 4px 4px 0;
+
+    body.light & {
+      background-color: rgba(175, 184, 193, 0.1);
+      border-color: var(--color-text-secondary-light);
+      color: var(--color-text-secondary-light);
+    }
+
+    body.dark & {
+      background-color: rgba(110, 118, 129, 0.2);
+      border-color: rgba(255, 255, 255, 0.3);
+      color: var(--color-text-secondary-dark);
+    }
+
+    p {
+      margin: 0.5rem 0;
+    }
+
+    code {
+      body.light & {
+        background-color: rgba(175, 184, 193, 0.3);
+      }
+
+      body.dark & {
+        background-color: rgba(110, 118, 129, 0.5);
+      }
+    }
   }
 
+  // 테이블
   table {
     margin: 2rem 0;
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+
+    th,
+    td {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      border: 1px solid;
+    }
+
+    th {
+      font-weight: 600;
+
+      body.light & {
+        background-color: #f6f8fa;
+        border-color: #e1e4e8;
+      }
+
+      body.dark & {
+        background-color: #161b22;
+        border-color: #30363d;
+      }
+    }
+
+    td {
+      body.light & {
+        border-color: #e1e4e8;
+      }
+
+      body.dark & {
+        border-color: #30363d;
+      }
+    }
+
+    tbody tr {
+      &:hover {
+        body.light & {
+          background-color: rgba(175, 184, 193, 0.05);
+        }
+
+        body.dark & {
+          background-color: rgba(110, 118, 129, 0.1);
+        }
+      }
+    }
   }
 }
 
@@ -251,14 +485,81 @@
   }
 
   .blog-post-header {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .blog-post-title {
+    font-size: 1.75rem;
   }
 
   .blog-post-content {
     font-size: 1rem;
+    line-height: 1.7;
+
+    h1 {
+      font-size: 1.75rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      margin-top: 1.75rem;
+    }
+
+    pre {
+      margin: 1.5rem -1rem;
+      padding: 1rem;
+      border-radius: 0;
+      border-left: none;
+      border-right: none;
+    }
+
+    img {
+      margin: 1.5rem -1rem;
+      border-radius: 0;
+      width: calc(100% + 2rem);
+      max-width: calc(100% + 2rem);
+    }
+
+    figure {
+      margin: 1.5rem -1rem;
+
+      img {
+        margin: 0;
+      }
+
+      figcaption {
+        padding: 0 1rem;
+      }
+    }
+
+    table {
+      font-size: 0.875rem;
+
+      th,
+      td {
+        padding: 0.5rem 0.75rem;
+      }
+    }
+  }
+
+  .blog-post-share {
+    margin: 3rem 0 2rem;
+  }
+
+  .blog-post-nav {
+    margin-top: 3rem;
   }
 
   .blog-post-nav-inner {
     grid-template-columns: 1fr;
+  }
+
+  .blog-post-nav-link {
+    padding: 1rem;
   }
 }

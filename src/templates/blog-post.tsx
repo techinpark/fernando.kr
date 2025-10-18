@@ -21,6 +21,14 @@ const BlogPostTemplate: React.FC<
   const siteUrl = data.site.siteMetadata.siteUrl
   const giscus = data.site.siteMetadata.giscus
 
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString)
+    const year = date.getFullYear()
+    const month = date.getMonth() + 1
+    const day = date.getDate()
+    return `${year}년 ${month}월 ${day}일`
+  }
+
   return (
     <Layout>
       <SEO
@@ -40,7 +48,7 @@ const BlogPostTemplate: React.FC<
           )}
           <h1 className="blog-post-title">{post.title}</h1>
           <div className="blog-post-meta">
-            <time className="blog-post-date">{post.date}</time>
+            <time className="blog-post-date">{formatDate(post.date)}</time>
             {post.tags && post.tags.length > 0 && (
               <div className="blog-post-tags">
                 {post.tags.map((tag) => (
@@ -129,7 +137,7 @@ export const pageQuery = graphql`
       id
       slug
       title
-      date(formatString: "MMMM DD, YYYY")
+      date
       tags
       description
       content

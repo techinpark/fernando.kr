@@ -1,5 +1,9 @@
 .giscus-comments {
   margin: 3rem 0;
+
+  @media (max-width: 768px) {
+    margin: 2rem 0;
+  }
 }
 
 .giscus-comments-title {
@@ -17,5 +21,10 @@
   body.dark & {
     color: var(--color-text-dark);
     border-color: var(--color-category-border-dark);
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
   }
 }

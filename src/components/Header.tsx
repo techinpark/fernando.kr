@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import { SiteQueryResult } from '../types'
+import { ThemeSwitch } from './ThemeSwitch'
 import './Header.scss'
 
 export const Header: React.FC = () => {
@@ -22,14 +23,7 @@ export const Header: React.FC = () => {
         <Link to="/" className="header-title">
           {title}
         </Link>
-        <nav className="header-nav">
-          <Link to="/" className="header-nav-link">
-            Posts
-          </Link>
-          <Link to="/about" className="header-nav-link">
-            About
-          </Link>
-        </nav>
+        <ThemeSwitch />
       </div>
     </header>
   )

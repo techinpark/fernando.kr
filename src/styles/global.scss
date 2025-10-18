@@ -98,15 +98,30 @@ code {
 pre {
   font-family: var(--font-family-code);
   font-size: 0.875rem;
-  line-height: 1.5;
-  padding: 1rem;
-  border-radius: 6px;
+  line-height: 1.6;
+  padding: 1.25rem;
+  border-radius: 8px;
   overflow-x: auto;
   margin: 1.5rem 0;
+  border: 1px solid;
+
+  body.light & {
+    background-color: #f6f8fa;
+    border-color: #e1e4e8;
+    color: #24292e;
+  }
+
+  body.dark & {
+    background-color: #161b22;
+    border-color: #30363d;
+    color: #c9d1d9;
+  }
 
   code {
     padding: 0;
     background: none;
+    color: inherit;
+    font-size: 0.875rem;
   }
 }
 

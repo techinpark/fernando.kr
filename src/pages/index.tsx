@@ -10,14 +10,17 @@ const IndexPage: React.FC<PageProps<IndexPageData>> = ({ data }) => {
   const posts = data.allNotionPost?.nodes || []
   const siteTitle = data.site.siteMetadata.title
 
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString)
+    const year = date.getFullYear()
+    const month = date.getMonth() + 1
+    const day = date.getDate()
+    return `${year}년 ${month}월 ${day}일`
+  }
+
   return (
     <Layout>
       <div className="index-page">
-        <h1 className="index-title">{siteTitle}</h1>
-        <p className="index-description">
-          {data.site.siteMetadata.description}
-        </p>
-
         {posts.length === 0 ? (
           <div className="index-empty">
             <p>
@@ -46,9 +49,8 @@ const IndexPage: React.FC<PageProps<IndexPageData>> = ({ data }) => {
                   )}
                   <div className="post-card-content">
                     <h2 className="post-card-title">{post.title}</h2>
-                    <p className="post-card-description">{post.description}</p>
                     <div className="post-card-meta">
-                      <time className="post-card-date">{post.date}</time>
+                      <time className="post-card-date">{formatDate(post.date)}</time>
                       {post.tags && post.tags.length > 0 && (
                         <div className="post-card-tags">
                           {post.tags.map((tag) => (
@@ -85,7 +87,7 @@ export const pageQuery = graphql`
         id
         slug
         title
-        date(formatString: "MMMM DD, YYYY")
+        date
         tags
         description
         cover
