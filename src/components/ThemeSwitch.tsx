@@ -9,8 +9,9 @@ export const ThemeSwitch: React.FC = () => {
     <button
       className="theme-switch"
       onClick={toggleTheme}
-      aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
-      title={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+      aria-label={`${theme === 'light' ? '다크 모드' : '라이트 모드'}로 전환`}
+      title={`${theme === 'light' ? '다크 모드' : '라이트 모드'}로 전환`}
+      type="button"
     >
       {theme === 'light' ? (
         // Moon icon for dark mode

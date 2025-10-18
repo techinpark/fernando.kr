@@ -44,7 +44,7 @@ const IndexPage: React.FC<PageProps<IndexPageData>> = ({ data }) => {
                 <a href={`/${post.slug}`} className="post-card-link">
                   {post.cover && (
                     <div className="post-card-cover">
-                      <img src={post.cover} alt={post.title} />
+                      <img src={post.cover} alt={post.title} loading="lazy" />
                     </div>
                   )}
                   <div className="post-card-content">

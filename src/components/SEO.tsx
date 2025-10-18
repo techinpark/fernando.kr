@@ -38,16 +38,55 @@ export const SEO: React.FC<SEOProps> = ({
       : `${site.siteMetadata.siteUrl}${image}`
     : `${site.siteMetadata.siteUrl}/og-default.png`
 
+  // 구조화된 데이터
+  const schemaOrgWebPage = {
+    '@context': 'https://schema.org',
+    '@type': article ? 'BlogPosting' : 'WebSite',
+    url: site.siteMetadata.siteUrl,
+    name: fullTitle,
+    headline: metaTitle,
+    description: metaDescription,
+    image: metaImage,
+    author: {
+      '@type': 'Person',
+      name: site.siteMetadata.author.name,
+    },
+  }
+
   return (
     <Helmet
       htmlAttributes={{
         lang: 'ko',
       }}
       title={fullTitle}
+      link={[
+        {
+          rel: 'preconnect',
+          href: 'https://cdn.jsdelivr.net',
+        },
+        {
+          rel: 'dns-prefetch',
+          href: 'https://cdn.jsdelivr.net',
+        },
+      ]}
+      script={[
+        {
+          type: 'application/ld+json',
+          innerHTML: JSON.stringify(schemaOrgWebPage),
+        },
+      ]}
       meta={[
         {
           name: `description`,
           content: metaDescription,
+        },
+        {
+          name: 'viewport',
+          content: 'width=device-width, initial-scale=1',
+        },
+        {
+          name: 'theme-color',
+          content: '#cc007a',
         },
         {
           property: `og:title`,
@@ -62,6 +101,14 @@ export const SEO: React.FC<SEOProps> = ({
           content: article ? `article` : `website`,
         },
         {
+          property: `og:url`,
+          content: site.siteMetadata.siteUrl,
+        },
+        {
+          property: `og:site_name`,
+          content: site.siteMetadata.title,
+        },
+        {
           property: `og:image`,
           content: metaImage,
         },
@@ -72,6 +119,10 @@ export const SEO: React.FC<SEOProps> = ({
         {
           property: `og:image:height`,
           content: `630`,
+        },
+        {
+          property: `og:locale`,
+          content: 'ko_KR',
         },
         {
           name: `twitter:card`,

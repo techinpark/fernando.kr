@@ -43,7 +43,7 @@ const BlogPostTemplate: React.FC<
         <header className="blog-post-header">
           {post.cover && (
             <div className="blog-post-cover">
-              <img src={post.cover} alt={post.title} />
+              <img src={post.cover} alt={post.title} loading="lazy" />
             </div>
           )}
           <h1 className="blog-post-title">{post.title}</h1>

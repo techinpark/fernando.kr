@@ -18,9 +18,9 @@ export const Header: React.FC = () => {
   const { title } = data.site.siteMetadata
 
   return (
-    <header className="header">
+    <header className="header" role="banner">
       <div className="header-inner">
-        <Link to="/" className="header-title">
+        <Link to="/" className="header-title" aria-label="홈으로 이동">
           {title}
         </Link>
         <ThemeSwitch />

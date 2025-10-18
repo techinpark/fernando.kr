@@ -24,7 +24,7 @@ export const Footer: React.FC = () => {
   const { author, social } = data.site.siteMetadata
 
   return (
-    <footer className="footer">
+    <footer className="footer" role="contentinfo">
       <div className="footer-inner">
         <div className="footer-social">
           {social.github && (

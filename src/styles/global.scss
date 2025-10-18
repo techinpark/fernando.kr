@@ -1,7 +1,7 @@
 @import './variables.scss';
 
-// Pretendard 폰트 import
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css');
+// Pretendard 폰트 import with font-display: swap
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.css');
 
 * {
   margin: 0;

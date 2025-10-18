@@ -54,7 +54,12 @@ export const SocialShare: React.FC<SocialShareProps> = ({
           </div>
         </TelegramShareButton>
 
-        <button onClick={handleCopyLink} className="social-share-button copy">
+        <button
+          onClick={handleCopyLink}
+          className="social-share-button copy"
+          aria-label="URL 복사하기"
+          type="button"
+        >
           <div className="social-share-copy-icon">
             <svg
               width="40"
