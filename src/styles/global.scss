@@ -1,0 +1,232 @@
+@import './variables.scss';
+
+// Pretendard 폰트 import
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-family-base);
+  line-height: 1.75;
+  transition: var(--transition-theme);
+
+  &.light {
+    background-color: var(--color-bg-light);
+    color: var(--color-text-light);
+    text-shadow: var(--shadow-light);
+  }
+
+  &.dark {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-dark);
+    text-shadow: var(--shadow-dark);
+  }
+}
+
+// 헤딩
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-bottom: 0.3rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+// 링크
+a {
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  body.light & {
+    color: var(--color-link-light);
+  }
+
+  body.dark & {
+    color: var(--color-link-dark);
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// 코드
+code {
+  font-family: var(--font-family-code);
+  font-size: 0.875em;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+
+  body.light & {
+    background-color: var(--color-code-bg-light);
+    color: var(--color-code-text-light);
+  }
+
+  body.dark & {
+    background-color: var(--color-code-bg-dark);
+    color: var(--color-code-text-dark);
+  }
+}
+
+pre {
+  font-family: var(--font-family-code);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+
+  code {
+    padding: 0;
+    background: none;
+  }
+}
+
+// 인용
+blockquote {
+  margin: 1.5rem 0;
+  padding-left: 1rem;
+  font-style: italic;
+
+  body.light & {
+    border-left: 4px solid var(--color-text-secondary-light);
+    color: var(--color-text-secondary-light);
+  }
+
+  body.dark & {
+    border-left: 4px solid rgba(255, 255, 255, 0.822);
+    color: var(--color-text-secondary-dark);
+  }
+}
+
+// 이미지
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+// 구분선
+hr {
+  border: none;
+  height: 1px;
+  margin: 2rem 0;
+
+  body.light & {
+    background-color: var(--color-category-border-light);
+  }
+
+  body.dark & {
+    background-color: var(--color-category-border-dark);
+  }
+}
+
+// 리스트
+ul,
+ol {
+  margin: 1rem 0;
+  padding-left: 2rem;
+
+  li {
+    margin: 0.5rem 0;
+  }
+}
+
+// 테이블
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+
+  th,
+  td {
+    padding: 0.75rem;
+    text-align: left;
+  }
+
+  body.light & {
+    th {
+      background-color: var(--color-category-bg-light);
+      border-bottom: 2px solid var(--color-category-border-light);
+    }
+
+    td {
+      border-bottom: 1px solid var(--color-category-border-light);
+    }
+  }
+
+  body.dark & {
+    th {
+      background-color: var(--color-category-bg-dark);
+      border-bottom: 2px solid var(--color-category-border-dark);
+    }
+
+    td {
+      border-bottom: 1px solid var(--color-category-border-dark);
+    }
+  }
+}
+
+// 스크롤바 스타일링 (webkit)
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+body.light {
+  ::-webkit-scrollbar-track {
+    background: var(--color-bg-light);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-category-border-light);
+    border-radius: 4px;
+
+    &:hover {
+      background: var(--color-text-secondary-light);
+    }
+  }
+}
+
+body.dark {
+  ::-webkit-scrollbar-track {
+    background: var(--color-bg-dark);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-category-border-dark);
+    border-radius: 4px;
+
+    &:hover {
+      background: var(--color-text-secondary-dark);
+    }
+  }
+}

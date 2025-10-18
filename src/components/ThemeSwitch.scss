@@ -1,0 +1,53 @@
+.theme-switch {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  body.light & {
+    background-color: #ffffff;
+    color: #333333;
+
+    &:hover {
+      background-color: #f4f7f8;
+      transform: scale(1.1);
+    }
+  }
+
+  body.dark & {
+    background-color: #24272c;
+    color: #eeeeee;
+
+    &:hover {
+      background-color: #2a2d34;
+      transform: scale(1.1);
+    }
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  @media (max-width: 768px) {
+    top: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

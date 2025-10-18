@@ -1,0 +1,21 @@
+.giscus-comments {
+  margin: 3rem 0;
+}
+
+.giscus-comments-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid;
+
+  body.light & {
+    color: var(--color-text-light);
+    border-color: var(--color-category-border-light);
+  }
+
+  body.dark & {
+    color: var(--color-text-dark);
+    border-color: var(--color-category-border-dark);
+  }
+}

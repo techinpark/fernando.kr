@@ -1,0 +1,264 @@
+.blog-post {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.blog-post-header {
+  margin-bottom: 3rem;
+}
+
+.blog-post-cover {
+  margin: 0 0 2rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+.blog-post-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 1rem 0;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+.blog-post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.blog-post-date {
+  font-size: 0.9375rem;
+
+  body.light & {
+    color: var(--color-text-secondary-light);
+  }
+
+  body.dark & {
+    color: var(--color-text-secondary-dark);
+  }
+}
+
+.blog-post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.blog-post-tag {
+  font-size: 0.875rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+
+  body.light & {
+    background-color: var(--color-category-bg-light);
+    color: var(--color-category-text-light);
+  }
+
+  body.dark & {
+    background-color: var(--color-category-bg-dark);
+    color: var(--color-category-text-dark);
+  }
+}
+
+.blog-post-content {
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+
+  // Notion 마크다운 콘텐츠 스타일링
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  h2 {
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid;
+
+    body.light & {
+      border-color: var(--color-category-border-light);
+    }
+
+    body.dark & {
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  p {
+    margin: 1.25rem 0;
+  }
+
+  a {
+    font-weight: 500;
+    text-decoration: underline;
+  }
+
+  ul,
+  ol {
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+
+    li {
+      margin: 0.75rem 0;
+    }
+  }
+
+  img {
+    margin: 2rem 0;
+    border-radius: 8px;
+  }
+
+  code {
+    font-size: 0.9em;
+  }
+
+  pre {
+    margin: 2rem 0;
+  }
+
+  blockquote {
+    margin: 2rem 0;
+  }
+
+  table {
+    margin: 2rem 0;
+  }
+}
+
+.blog-post-share {
+  margin: 4rem 0 3rem;
+  padding: 2rem 0;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+
+  body.light & {
+    border-color: var(--color-category-border-light);
+  }
+
+  body.dark & {
+    border-color: var(--color-category-border-dark);
+  }
+}
+
+.blog-post-comments {
+  margin: 3rem 0;
+}
+
+.blog-post-nav {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid;
+
+  body.light & {
+    border-color: var(--color-category-border-light);
+  }
+
+  body.dark & {
+    border-color: var(--color-category-border-dark);
+  }
+}
+
+.blog-post-nav-inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.blog-post-nav-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+
+  body.light & {
+    background-color: var(--color-category-bg-light);
+    border: 1px solid var(--color-category-border-light);
+
+    &:hover {
+      background-color: var(--color-navigator-bg);
+      border-color: var(--color-primary-light);
+    }
+  }
+
+  body.dark & {
+    background-color: var(--color-category-bg-dark);
+    border: 1px solid var(--color-category-border-dark);
+
+    &:hover {
+      background-color: var(--color-category-item-dark);
+      border-color: var(--color-link-dark);
+    }
+  }
+
+  &.next {
+    text-align: right;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.blog-post-nav-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+
+  body.light & {
+    color: var(--color-primary-light);
+  }
+
+  body.dark & {
+    color: var(--color-link-dark);
+  }
+}
+
+.blog-post-nav-title {
+  font-size: 1rem;
+  font-weight: 500;
+
+  body.light & {
+    color: var(--color-text-light);
+  }
+
+  body.dark & {
+    color: var(--color-text-dark);
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-post {
+    max-width: 100%;
+  }
+
+  .blog-post-header {
+    margin-bottom: 2rem;
+  }
+
+  .blog-post-content {
+    font-size: 1rem;
+  }
+
+  .blog-post-nav-inner {
+    grid-template-columns: 1fr;
+  }
+}

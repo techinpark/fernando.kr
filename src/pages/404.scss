@@ -1,0 +1,75 @@
+@use 'sass:color';
+
+.not-found-page {
+  text-align: center;
+  padding: 4rem 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+
+  h1 {
+    font-size: 6rem;
+    margin: 0;
+    background: var(--color-gradient-light);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @media (max-width: 768px) {
+      font-size: 4rem;
+    }
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin: 1rem 0;
+
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  p {
+    font-size: 1.125rem;
+    margin: 1.5rem 0 2rem;
+
+    body.light & {
+      color: var(--color-text-secondary-light);
+    }
+
+    body.dark & {
+      color: var(--color-text-secondary-dark);
+    }
+  }
+
+  .home-link {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+
+    body.light & {
+      background-color: var(--color-primary-light);
+      color: white;
+
+      &:hover {
+        background-color: color.scale(#cc007a, $lightness: -25%);
+        transform: translateY(-2px);
+      }
+    }
+
+    body.dark & {
+      background-color: var(--color-link-dark);
+      color: white;
+
+      &:hover {
+        background-color: color.scale(#bb72ec, $lightness: 31.875%);
+        transform: translateY(-2px);
+      }
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

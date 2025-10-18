@@ -1,61 +1,61 @@
-// app
-$theme-gradient: linear-gradient(72deg, #291e95, #cc007a);
-$top-header-text-color: #fff;
-$theme-background: #24292e;
+// CSS Variables for Theme System
+:root {
+  // 폰트
+  --font-family-base: -apple-system, BlinkMacSystemFont, 'Pretendard Variable',
+    Pretendard, system-ui, sans-serif;
+  --font-family-code: 'Menlo', 'Monaco', 'Courier New', monospace;
 
+  // 레이아웃
+  --max-width: 48rem; // rhythm(24) 상당
+  --content-padding: 1.5rem;
 
+  // 라이트 테마 색상
+  --color-bg-light: #ffffff;
+  --color-text-light: #333333;
+  --color-text-secondary-light: #7d7d7d;
+  --color-text-tertiary-light: #aaaaaa;
+  --color-link-light: #000080;
+  --color-primary-light: #cc007a;
+  --color-gradient-light: linear-gradient(72deg, #291e95, #cc007a);
 
-/**
- * @light theme
- */
+  // 카테고리 (라이트)
+  --color-category-bg-light: #f4f7f8;
+  --color-category-item-light: #ffffff;
+  --color-category-border-light: #ecf0f2;
+  --color-category-text-light: #666666;
+  --color-category-highlight-border-light: #909da1;
+  --color-category-highlight-text-light: #636c6e;
 
-// body
-$light-background-color: #fff;
-$light-text-shadow: 0 0 0.1px rgba(0, 0, 0, 0.3);
-//$light-hover-text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  // 다크 테마 색상
+  --color-bg-dark: #282c35;
+  --color-text-dark: #eeeeee;
+  --color-text-secondary-dark: #d8d7d7;
+  --color-text-tertiary-dark: #999999;
+  --color-link-dark: #bb72ec;
+  --color-primary-dark: #cc007a;
 
-// index
-$dimmed-color: #eef5db;
-$light-link-color: #000080;
-$dark-gray: #333;
-$middle-gray: #7d7d7d;
-$light-gray: #aaa;
+  // 카테고리 (다크)
+  --color-category-bg-dark: #24272c;
+  --color-category-item-dark: #282c35;
+  --color-category-border-dark: rgb(56, 54, 54);
+  --color-category-text-dark: #d8d7d7;
+  --color-category-highlight-border-dark: #666666;
+  --color-category-highlight-text-dark: #ffffff;
 
-// blog-templates
-$navigator-text-color: #cc007a;
-$navigator-background-color: #fceff7;
-$blockquote-text-color: #999;
+  // 네비게이터
+  --color-navigator-bg: #fceff7;
+  --color-navigator-text: #cc007a;
 
-// code
-$inline-dimmed-color: #ece5f1;
-$inline-text-color: #4b2043;
+  // 코드 블록
+  --color-code-bg-light: #ece5f1;
+  --color-code-text-light: #4b2043;
+  --color-code-bg-dark: #1e2029;
+  --color-code-text-dark: #d4d4d4;
 
-// category
-$light-category-border-color: #ecf0f2;
-$light-category-highlight-border-color: #909da1;
-$light-category-background-color: #f4f7f8;
-$light-category-text-color: #666;
-$light-category-highlight-text-color: #636c6e;
-$light-category-item-color: #fff;
+  // 그림자
+  --shadow-light: 0 0 0.1px rgba(0, 0, 0, 0.3);
+  --shadow-dark: 0 0 0.1px rgba(255, 255, 255, 0.3);
 
-/**
- * @dark theme
- */
-$dark-background-color: #282c35;
-$dark-link-color: #bb72ec;
-
-$dark-lightest-font-color: #fff;
-$dark-light-font-color: #eeeeee;
-$dark-middle-font-color: #d8d7d7;
-
-$dark-text-shadow: 0 0 0.1px rgba(255, 255, 255, 0.3);
-//$dark-hover-text-shadow: 0 0 6px rgba(255, 255, 255, 0.2);
-
-$dark-category-item-color: #282c35;
-$dark-category-background-color: #24272c;
-
-$dark-category-border-color: rgb(56, 54, 54);
-$dark-category-text-color: #d8d7d7;
-
-$dark-category-highlight-border-color: #666;
-$dark-category-highlight-text-color: #fff;
+  // 전환 효과
+  --transition-theme: background-color 0.3s ease, color 0.3s ease;
+}
