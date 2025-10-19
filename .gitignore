@@ -42,3 +42,4 @@ _v1_backup/
 # Build
 dist/
 build/
+_blog_backup/
